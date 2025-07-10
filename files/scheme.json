@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "標準月薪制",
+        "description": "時薪x工時 + 獎金 - 遲到罰款",
+        "fields": [
+            {
+                "key": "hourWage",
+                "label": "時薪",
+                "type": "number",
+                "default": 0
+            },
+            {
+                "key": "hours",
+                "label": "工作時數",
+                "type": "number",
+                "default": 0
+            },
+            {
+                "key": "lateDays",
+                "label": "遲到天數",
+                "type": "number",
+                "default": 0
+            },
+            {
+                "key": "bonus",
+                "label": "獎金",
+                "type": "number",
+                "default": 0
+            }
+        ],
+        "formula": "baseWage * hours - lateDays * 100 + bonus"
+    }
+]
