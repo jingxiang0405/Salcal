@@ -1,5 +1,17 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import styles from './ConfirmModal.module.css';
+
+const StyledModalContent = styled('div')(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  color: theme.palette.text.primary,
+  padding: '25px',
+  borderRadius: '8px',
+  boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
+  width: '90%',
+  maxWidth: '400px',
+  textAlign: 'center',
+}));
 
 const ConfirmModal = ({ isOpen, onClose, onConfirm, message }) => {
   if (!isOpen) {
@@ -8,7 +20,8 @@ const ConfirmModal = ({ isOpen, onClose, onConfirm, message }) => {
 
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+      <StyledModalContent onClick={(e) => e.stopPropagation()}>
+        <h3 className={styles.title}>確認操作</h3>
         <h3 className={styles.title}>確認操作</h3>
         <p className={styles.message}>{message}</p>
         <div className={styles.buttonContainer}>

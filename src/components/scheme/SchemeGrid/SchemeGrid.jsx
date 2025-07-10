@@ -1,8 +1,15 @@
+import { styled } from '@mui/material/styles';
 import { useCallback, useState } from 'react'
 import SchemeCard from '../SchemeCard/SchemeCard'
 import EditSchemeModal from '../EditSchemeModal/EditSchemeModal';
 import ConfirmModal from '../../public/ConfirmModal/ConfirmModal';
 import styles from './SchemeGrid.module.css'
+
+const StyledGrid = styled('div')(({ theme }) => ({
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '20px',
+}));
 
 /**
  * @param {Array<object>} schemeData - An array of schemes 
@@ -42,7 +49,7 @@ const SchemeGrid = ({ schemeData }) => {
     }
 
     return (
-        <div className={styles.grid}>
+        <StyledGrid>
             {
                 schemeData?.map((scheme, index) =>
                     <SchemeCard scheme={scheme} key={`scheme-${index}`} onEdit={handleSchemeEdit} onDelete={handleSchemeDelete} />

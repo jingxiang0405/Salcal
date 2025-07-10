@@ -12,12 +12,13 @@
 }
 
 .modalContent {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  min-width: 400px;
-  position: relative;
+  /* These styles are now handled by StyledModalContent in EditSchemeModal.jsx */
+  /* background-color: #fff; */
+  /* padding: 20px; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+  /* min-width: 400px; */
+  /* position: relative; */
 }
 
 .cancelButton {
