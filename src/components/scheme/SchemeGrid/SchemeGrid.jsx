@@ -63,7 +63,7 @@ const SchemeGrid = ({ schemeData }) => {
                 onConfirm={handleConfirmDelete}
                 message={`您確定要刪除此方案嗎？此操作無法復原。`}
             />
-        </div>
+        </StyledGrid>
     )
 }
 

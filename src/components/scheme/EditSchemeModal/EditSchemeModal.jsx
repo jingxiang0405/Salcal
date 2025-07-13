@@ -26,7 +26,7 @@ const EditSchemeModal = ({ scheme, isOpen, onClose, onSave, }) => {
 
                 <button onClick={onClose} className={styles.cancelButton}>取消</button>
                 <button onClick={onSave} className={styles.confirmButton}>儲存</button>
-            </div>
+            </StyledModalContent>
 
 
         </div>

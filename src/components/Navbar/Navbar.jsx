@@ -1,10 +1,11 @@
 import React from 'react';
 import { AppBar, Toolbar, Button, Box } from '@mui/material';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ items }) => {
     const location = useLocation();
 
+    const navigate = useNavigate();
     return (
         <AppBar position="static" color="transparent" elevation={0} sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}>
             <Toolbar sx={{ justifyContent: 'center' }}>
@@ -12,7 +13,7 @@ const Navbar = ({ items }) => {
                     {items.map((item) => (
                         <Button
                             key={item.label}
-                            component={RouterLink}
+                            onClick={() => { navigate(item.href) }}
                             to={item.href}
                             variant={location.pathname === item.href ? 'outlined' : 'text'}
                             color="inherit"

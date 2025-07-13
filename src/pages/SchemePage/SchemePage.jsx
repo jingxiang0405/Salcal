@@ -47,6 +47,4 @@ const SchemePage = () => {
     )
 }
 
-export default SchemePage
-
-export default SchemePage 
+export default SchemePage;
