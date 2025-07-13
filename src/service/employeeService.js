@@ -1,5 +1,5 @@
 import employees from '../../files/employee.json';
-
+import { writeTextFile, BaseDirectory } from '@tauri-apps/plugin-fs';
 /**
  * Retrieves all calculation schemes from the static JSON file.
  * 
@@ -10,6 +10,6 @@ import employees from '../../files/employee.json';
  * @returns {Promise<Array>} A promise that resolves to an array of scheme objects.
  * We wrap the result in a Promise to simulate an asynchronous operation like an API call.
  */
-export const GetSchemes = async () => {
+export const GetEmployees = async () => {
     return Promise.resolve(employees);
 };

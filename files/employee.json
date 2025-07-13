@@ -1,7 +1,7 @@
 [
     {
-        "id": 1,
-        "name": "員工一號",
-        "": "hour ?"
+        "name": "Tom",
+        "wageScheme": "月薪制",
+        "wage": 30000
     }
 ]
