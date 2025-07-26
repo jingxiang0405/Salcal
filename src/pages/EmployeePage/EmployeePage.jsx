@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import EmployeeBox from "@/components/employee/EmployeeBox/EmployeeBox";
 import Button from '@mui/material/Button';
 
-import { GetEmployees } from "@/service/employeeService";
 import styles from './EmployeePage.module.css'
 
 const EmployeePage = () => {
