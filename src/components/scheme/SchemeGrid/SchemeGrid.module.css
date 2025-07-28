@@ -1,6 +1,0 @@
-.grid {
-    /* These styles are now handled by StyledGrid in SchemeGrid.jsx */
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* gap: 20px; */
-}
